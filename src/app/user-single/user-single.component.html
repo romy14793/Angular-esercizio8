@@ -1,0 +1,27 @@
+<div
+  *ngIf="singUser; else noUser"
+  class="container-fluid bg-orange mb-3 py-4"
+  [ngClass]="{
+    'border-info': singUser.role == 'staff',
+    'border-warning': singUser.role == 'manager',
+    'border-success': singUser.role == 'admin',
+    'border-danger': singUser.role == 'student'
+  }"
+>
+  <div>
+    <img class="w-25" src="{{ singUser.profilePhotoUrl }}" />
+    <b> {{ singUser.name }} {{ singUser.surname }}</b>
+    {{ singUser.age }}
+    {{ singUser.address.city }}
+    <button class="mx-2" (click)="sendDetails()">Details</button>
+    <button (click)="delete()">Delete</button>
+  </div>
+</div>
+
+<ng-template #noUser>
+  <div
+    class="container-fluid bg-orange mb-3 d-flex align-items-center justify-content-center"
+  >
+    <h6>user-single.component</h6>
+  </div>
+</ng-template>

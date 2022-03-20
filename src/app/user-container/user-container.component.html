@@ -1,0 +1,14 @@
+<div class="m-2 bg-blueSky pt-2" style="height: 90%">
+  <h5>user-container.component</h5>
+  <div class="row justify-content-center mt-5 pb-5">
+    <ex3-user-list
+      (sendIndexDetails)="receiveSingleUser($event)"
+      class="col-6 bg-green mx-1 pt-2"
+    ></ex3-user-list>
+    <ex3-user-detail
+      (nullUser)="nullUser($event)"
+      [singleUser]="singleUser"
+      class="col-5 bg-yellow mx-1 pt-2"
+    ></ex3-user-detail>
+  </div>
+</div>

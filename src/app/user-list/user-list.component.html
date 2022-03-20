@@ -1,0 +1,22 @@
+<h5>user-list.component</h5>
+<div
+  *ngIf="person.length > 0; else zeroUser"
+  class="container-fluid text-start"
+>
+  <ex3-user-single
+    [singUser]="singUser"
+    *ngFor="let singUser of person; let i = index"
+    [index]="i"
+    (deleted)="deleteUser($event)"
+    (requestedDetails)="userDetails($event)"
+  >
+  </ex3-user-single>
+</div>
+
+<ng-template #zeroUser>
+  <div
+    class="container-fluid bg-orange py-3 d-flex align-items-center justify-content-center"
+  >
+    <h6>Non sono presenti utenti</h6>
+  </div>
+</ng-template>

@@ -1,0 +1,46 @@
+$blueSky: #dae8fc;
+$red: #f8cecc;
+$green: #d5e8d4;
+$yellow: #fff2cc;
+$orange: #ffe6cc;
+$plum: #e1d5e7;
+$greenYellow: #cdeb8b;
+$lightBlue: #bac8d3;
+
+@mixin border($color) {
+  border: 1px solid;
+  border-color: darken($color, 50%);
+}
+
+.bg-blueSky {
+  background-color: $blueSky;
+  @include border($blueSky);
+}
+.bg-red {
+  background-color: $red;
+  @include border($red);
+}
+.bg-green {
+  background-color: $green;
+  @include border($green);
+}
+.bg-yellow {
+  background-color: $yellow;
+  @include border($yellow);
+}
+.bg-orange {
+  background-color: $orange;
+  @include border($orange);
+}
+.bg-plum {
+  background-color: $plum;
+  @include border($plum);
+}
+.bg-greenYellow {
+  background-color: $greenYellow;
+  @include border($greenYellow);
+}
+.bg-lightBlue {
+  background-color: $lightBlue;
+  @include border($lightBlue);
+}

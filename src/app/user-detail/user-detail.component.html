@@ -1,0 +1,29 @@
+<h5>user-detail.component</h5>
+<div *ngIf="singleUser" class="user text-start d-flex-column">
+  <button (click)="closeComponent()">Chiudi dettagli</button>
+  <p>id: {{ singleUser.id }}</p>
+  <p>Name: {{ singleUser.name }}</p>
+  <p>Surname: {{ singleUser.surname }}</p>
+  <p>Age: {{ singleUser.age }}</p>
+  <p>Date of birth: {{ singleUser.dateOfBirth }}</p>
+  <p><b>Address:</b></p>
+  <p>City: {{ singleUser.address.city }}</p>
+  <p>Street: {{ singleUser.address.street }}</p>
+  <p>PostalCode: {{ singleUser.address.postalCode }}</p>
+  <p>Role: {{ singleUser.role }}</p>
+  <p>username: {{ singleUser.username }}</p>
+  <img
+    width="200px"
+    src="{{ singleUser.profilePhotoUrl }}"
+    alt="User Image Profile"
+  />
+  <p>Gender: {{ singleUser.gender }}</p>
+  <p>
+    <b>Company: {{ companies[0].name }}</b>
+  </p>
+  <p>Description: {{ companies[0].description }}</p>
+  <p>
+    <b>Company: {{ companies[1].name }}</b>
+  </p>
+  <p>Description: {{ companies[1].description }}</p>
+</div>
